@@ -1,15 +1,15 @@
 const namesByLanguage = {
     all: ["Saicharan", "Mandar", "Janaki", "Shaheen", "Nikhil.P", "Lokesh", "Sonali", "Chithra", "Kamal", "Raju", "Akshay", "Bhagya", "Haresh", "Vidya", "Vishesh", "Shweta", "Gaurav", "Kirti", "Sanket", "Priyanka.K", "Darshita", "Ramya", "Priya, Tiwar", "Divyansha", "Haritha", "Suvarna", "Alekhya", "Suraiya", "Mahima", "Ankit", "Amar", "Kavya", "Nidhi", "Ashwin", "Saran", "Tarun", "Sandeep", "S. VenkateshBabu", "NagaTeja", "Indravalli", "Vaishnavi", "Divya", "Suchitra", "Srilakshmi", "Krishna", "Nikhitha", "Gayathri", "Santhosh", "Ranjith", "Ritika", "Nikhil.Sabbani","Ajitha", "Samyuktha", "Triveni", "Shivkumar", "Sushma", "Prasannatha", "Tanuja", "Harini"],
-    telugu: ["Shaheen", "Lokesh", "Jagadeesh", "Gayathri", "Nikhitha", "Santhosh", "Nikhil.Sabbani", "Nidhi", "Saran", "Tarun", "S. VenkateshBabu", "NagaTeja", "Indravalli", "Vaishnavi", "Divya", "Suchitra", "Srilakshmi", "Krishna", "Ajitha", "Samyuktha", "Triveni", "ShivKumar","Sushma", "Prasannatha", " Tanuja"], 
+    telugu: ["Shaheen", "Lokesh", "Gayathri", "Nikhitha", "Santhosh", "Nikhil.Sabbani", "Nidhi", "Saran", "Tarun", "S. VenkateshBabu", "NagaTeja", "Indravalli", "Vaishnavi", "Divya", "Suchitra", "Srilakshmi", "Krishna", "Ajitha", "Samyuktha", "Triveni", "ShivKumar","Sushma", "Prasannatha", " Tanuja"], 
     kannada: ["Shweta", "Priyanka.K", "Kavya", "Bhagya", "Divya", "Shivkumar", "Vidya"],
     hindi: ["Saicharan", "Mandar", "Sonali", "Chitra", "Kamal", "Raju", "Akshay", "Vishesh", "Gaurav", "Kirti", "Sanket", "Mahima", "Ankit", "Amar","Divyansha"],
     tamil: ["Janaki", "Lokesh", "Darshita", "Deepan", "Suraiya", "harish", "Sandeep", "Ranjith", "Jagadeesh", "Harini"]
     
 }; 
 const namesByCareerLevel = {
-    SSE: ["Vidya", "Vishesh", "Shweta", "Gaurav", "Kirti", "Sanket", "Priyanka.K", "Darshita", "Priya, Tiwar", "Divyansha", "Haritha", "Suvarna", "Alekhya"],    
+    SSE: ["Vidya", "Vishesh", "Shweta", "Kirti", "Sanket", "Priyanka.K", "Darshita", "Priya, Tiwar", "Divyansha", "Haritha", "Suvarna", "Alekhya"],    
     SE: ["Suraiya", "Mahima", "Ankit", "Amar", "Sushma", "Kavya", "Gayathri", "Nikhitha", "Santhosh", "Ranjith", "Ritika", "Nikhil.Sabbani", "Nidhi", "Ashwin", "Saran", "Tarun", "Sandeep", "S. VenkateshBabu"],
-    LeadsAndAbove: ["Saicharan", "Mandar", "Janaki", "Shaheen", "Nikhil.P", "Lokesh", "Sonali", "Chitra", "Kamal", "Raju", "Akshay", "Bhagya", "Haresh"],
+    LeadsAndAbove: ["Saicharan", "Gaurav", "Mandar", "Janaki", "Shaheen", "Nikhil.P", "Lokesh", "Sonali", "Chitra", "Kamal", "Raju", "Akshay", "Bhagya", "Haresh"],
     ASE: ["NagaTeja", "Indravalli", "Vaishnavi", "Divya", "Suchitra", "Srilakshmi", "Krishna", "Ajitha", "Samyuktha", "Triveni", "ShivKumar", "Prasannatha", "Tanuja", "Harini"]
 };
     
