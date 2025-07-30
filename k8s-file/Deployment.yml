@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: random-app-deployment
+  labels:
+    app: random-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: random-app
+  template:
+    metadata:
+      labels:
+        app: random-app
+    spec:
+      containers:
+        - name: random-ap1p
+          image: randomapp.azurecr.io/nagatea_app
+          ports:
+            - containerPort: 80
+
