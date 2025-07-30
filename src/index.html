@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catch the luckyone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <img class='logo' src="./images/Logo.jpg">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#welcomebanner">Banner</a>
+                </li>
+                <li>
+                    <a href="#Sub-Cont">Random Picker</a>
+                </li>
+                <li>
+                    <a href="#main-name-picker">Fair Chance</a>
+                </li>
+                <li>
+                    <a href="#team-divide">Divide Team</a>
+                </li>
+            </ul>
+        <nav>
+    </div>
+    <div class='welcomebanner' id='welcomebanner'>
+        <div class='bann-txt'>
+            <h1>Say goodbye to the struggle of picking names! Random Picker will make it stress-free. <br> Try it now!</h1>
+        </div>
+        <div class="bann-img"><img class='hat' src="./images/hat.jpg"></div>
+    </div>
+    <div class='Sub-Cont' id='Sub-Cont'>
+        <div class='img'>
+            <img src="./images/random.png">
+            <img src="./images/universe.png">
+        </div>
+        <div class='main-spin'>
+            <div class='spin-cont'>
+                <label for="language">Select category</label>
+                <select id="type" onchange="populateNames()">
+                    <option value="language">Language</option>
+                    <option value="career">Level</option>
+                </select>
+                <select id="subtype">
+                </select>
+            </div>
+            <div id="spinner" class="spinner">Click Start</div>
+            <button onclick="startSpinner()">Start Spinner</button>
+            <script src="script.js"></script>
+        </div>
+    </div>
+
+    <div class='main-name-picker' id='main-name-picker'>
+        <h2 class='pickerHeader'>Let's give fair chance to everyone buddy..!!!!</h2>
+        <div class='name-picker'>
+            <div class='namePickersection1' id='namePickersection1'>
+                <textarea id='name-input' placeholder="Enter names separated by commas or new lines"></textarea>
+                <button onclick="addNames()">Add Names</button>
+            </div>
+            <div class='namePickersection2' id='namePickersection2'>
+                <div id="name-list"> please add my buddies &#128543; </div>
+                <button onclick="selectRandomName()">Select Random Name</button>
+                <div id="selected-name">Let's goo....</div>
+            </div>
+        </div>
+    </div>
+
+    <div class='team-divider' id='team-divide'>
+        <h1 class='teamdivheader'>Let's split team for fair and fun challenges</h1>
+        <div class='team-div1'>
+            <div class='teamDivSub1'>
+                <textarea id="membersInput" placeholder="Enter names separated by commas or new lines" rows="4" cols="50"></textarea>
+            </div>
+            <div class='teamDivSub2'>
+                <div class='teamDivSubDiv1'>
+                    <label class='teamCounts' for="teamCount">Number of teams:</label>
+                    <select id="teamCount">
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                    </select>
+                </div>
+                <div class='teamDivSubDiv2'>
+                    <button onclick="divideTeams()">Divide into Teams</button>
+                </div>
+            </div>
+            <div class='teamDivSubDiv3'>
+                <img class='teamdivimg' src="./images/teamdivbacgnd1.jpg">
+            </div>
+        </div>
+        <div class='team-div2'>
+            <div id="teamsContainer"></div>
+        </div>
+    </div>
+    <div class="design">
+        <h5><i class="fa-regular fa-copyright"></i> Copy rights: Designed by Naga Teja</h5>
+    </div>
+</body>
+</html>
