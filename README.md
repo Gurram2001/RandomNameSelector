@@ -10,11 +10,12 @@ This project demonstrates a fully automated DevOps pipeline using **Azure cloud 
 Before running this project, ensure the following Azure services are properly set up:
 
 - ✅ A **Virtual Machine (VM)** is deployed (Ubuntu recommended) for self-hosted agent configuration.
-- ✅ An **Azure Kubernetes Service (AKS)** cluster is configured and running. 
 - ✅ An **Azure Container Registry (ACR)** is created and accessible by AKS with attach-acr policy
+- ✅ An **Azure Kubernetes Service (AKS)** cluster is configured and running. `az aks create --name random-app-aks --resource-group app2 --node-vm-size Standard_B2s --enable-addons monitoring --attach-acr random-app`
 - ✅ `kubectl`, `docker`, and `git` are installed on the VM and configured.
 - ✅ Azure CLI is installed and logged in with your Azure subscription.
-- ✅ The AKS context is added using `az aks get-credentials`.
+- ✅ The AKS context is added using `aks get-credentials --name aks --resource-group new2`
+`.
 
 ---
 
