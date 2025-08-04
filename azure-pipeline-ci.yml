@@ -1,0 +1,67 @@
+trigger:
+  branches:
+    include:
+      - argo-cd
+  paths:
+    exclude:
+      - k8s-file
+
+
+pool:
+  name: random
+
+resources:
+- repo: self
+
+variables:
+  # Container registry service connection established during pipeline creation
+  dockerRegistryServiceConnection: 'ec1bddaa-c74a-450e-a6cb-65c2cdc7f0dd'
+  imageRepository: 'randomselector'
+  acr: 'randomapp'
+  containerRegistry: 'randomapp.azurecr.io'
+  dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+  tag: '$(Build.BuildId)'
+
+stages:
+
+- stage: Login2
+  displayName: Login2
+  jobs:
+  - job: Login2
+    displayName: Login2
+    steps:
+    - task: AzureCLI@2
+      displayName: Build and push an image to container registry
+      inputs:
+        azureSubscription: 'Azure subscription 1 (469431bb-d1dc-4c42-8406-c7d16a3b5dc0)'
+        scriptType: 'bash'
+        scriptLocation: 'inlineScript'
+        inlineScript: 'az acr login --name $(acr)'
+
+- stage: BuildPush
+  displayName: Build and push stage
+  jobs:
+  - job: BuildPush
+    displayName: Build-Push/DIsplayName
+    steps:
+    - task: Bash@3
+      displayName: Build and push an image to container registry
+      inputs:
+        targetType: 'inline'
+        script: 'docker buildx build --platform linux/arm64 -t $(containerRegistry)/$(imageRepository):$(tag) . --push'
+        
+- stage: UpdateK8Manifestfile
+  displayName: Update k8 file
+  jobs:
+  - job: UpdateK8
+    displayName: UpdateKuberentesmanifestDIsplayName
+    steps:
+    - task: Bash@3
+      inputs:
+        filePath: 'Update-k8s-Manifest.sh'
+      env:
+        containerRegistry: $(containerRegistry)
+        imageRepository: $(imageRepository)
+        tag: $(tag)
+        PAT: $(PAT)
+
