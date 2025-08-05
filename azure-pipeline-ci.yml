@@ -15,7 +15,7 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'ec1bddaa-c74a-450e-a6cb-65c2cdc7f0dd'
+  dockerRegistryServiceConnection: 'ec1bddaa-c74a-450e-a6cb-.........'
   imageRepository: 'randomselector'
   acr: 'randomapp'
   containerRegistry: 'randomapp.azurecr.io'
@@ -33,7 +33,7 @@ stages:
     - task: AzureCLI@2
       displayName: Build and push an image to container registry
       inputs:
-        azureSubscription: 'Azure subscription 1 (469431bb-d1dc-4c42-8406-c7d16a3b5dc0)'
+        azureSubscription: 'Azure subscription 1 (469431bb-d1dc-4c42-8406-.......0)'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: 'az acr login --name $(acr)'
